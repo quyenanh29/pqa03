@@ -115,9 +115,20 @@ input, textarea, button { font-family: inherit; }
   position: relative; min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   padding-top: var(--nav-h); overflow: hidden;
+  background-image: url('cover.JPG');
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-bg { position: absolute; inset: 0; pointer-events: none; }
+.hero-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,11,0.5) 0%,      /* trên: hơi tối */
+    rgba(10,10,11,0.7) 60%,     /* giữa: tối hơn */
+    rgba(10,10,11,1)   100%     /* dưới: đen hoàn toàn */
+  );
+}
 
 .grid-overlay {
   position: absolute; inset: 0;
